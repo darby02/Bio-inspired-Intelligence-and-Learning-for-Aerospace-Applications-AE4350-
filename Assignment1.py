@@ -9,8 +9,8 @@ GRID_SIZE = 50
 NUM_AGENTS = 10
 COVERAGE_RADIUS = 1
 COMM_RADIUS = 1
-FLOCK_RADII = [7]
-FLOCK_ALIGNMENT_WEIGHTS = [0.5]
+FLOCK_RADII = [3, 5, 7]
+FLOCK_ALIGNMENT_WEIGHTS = [0.3, 0.5, 0.7]
 FLOCK_COHESION_WEIGHTS = [0.3]
 FLOCK_SEPARATION_WEIGHTS = [2]
 STEPS_PER_EPISODE =100
@@ -229,4 +229,5 @@ for FLOCK_RADIUS in FLOCK_RADII:
                 evolutionary_learning(FLOCK_ALIGNMENT_WEIGHT, FLOCK_COHESION_WEIGHT, FLOCK_SEPARATION_WEIGHT, FLOCK_RADIUS)
                 end_time = time.time()
                 time_taken = end_time - start_time
+
                 print(f"time taken : {time_taken}")
